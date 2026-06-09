@@ -15,7 +15,9 @@ export interface HistoryResponse {
   messages: ChatMessage[];
 }
 
-const BASE = "/chat";
+const BASE = import.meta.env.PROD
+  ? `${import.meta.env.VITE_API_URL}/chat`
+  : "/chat";
 
 export async function sendMessage(
   message: string,
@@ -28,9 +30,11 @@ export async function sendMessage(
   });
 
   const data = await res.json();
+
   if (!res.ok) {
     throw new Error(data.error ?? "Failed to send message.");
   }
+
   return data as SendMessageResponse;
 }
 
@@ -38,7 +42,9 @@ export async function fetchHistory(
   sessionId: string
 ): Promise<HistoryResponse | null> {
   const res = await fetch(`${BASE}/history/${sessionId}`);
+
   if (res.status === 404) return null;
   if (!res.ok) return null;
+
   return res.json() as Promise<HistoryResponse>;
 }
