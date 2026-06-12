@@ -2,7 +2,7 @@
 
 A full-stack AI-powered live chat support widget for a fictional e-commerce store. Built as a hiring assignment for Spur.
 
-**Live demo:** _[Add your deployed URL here]_
+**Live demo:** https://ai-support-agent-xi.vercel.app/
 
 ---
 
