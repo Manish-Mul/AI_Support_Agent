@@ -1,6 +1,6 @@
 # 🛍️ Spark & Co. — AI Support Chat Agent
 
-A full-stack AI-powered live chat support widget for a fictional e-commerce store. Built as a hiring assignment for Spur.
+A full-stack AI-powered live chat support widget for a fictional e-commerce store.
 
 **Live demo:** https://ai-support-agent-xi.vercel.app/
 
